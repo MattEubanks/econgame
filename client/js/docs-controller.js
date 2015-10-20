@@ -8,11 +8,9 @@ function DocsController($http, $scope) {
 	  var ws = new WebSocket('ws://localhost:8000');
 	  ws.addEventListener('open', function() {
 	    ws.send('you!');
-	    console.log("message sent");
 	  })
 
 	  ws.addEventListener('message', function(event) {
-	    console.log("player added");
 	    display();
 
 	  })
@@ -51,14 +49,3 @@ function DocsController($http, $scope) {
 	  }  
   }
 }
-// window.addEventListener('load', function(){ 
-//   var ws = new WebSocket('ws://localhost:8080');
-//   ws.addEventListener('open', function(){
-//         ws.send("whats up dawg");
-//         console.log("message sent");
-//   })
-    
-//   ws.addEventListener('message',function(event){
-//       console.log(event.data);
-//     })
-// })
