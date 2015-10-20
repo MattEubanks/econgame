@@ -2,7 +2,7 @@
   angular.module('main', [
     'ui.router'
   ])
-
+// sets up our controllers
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
       .state('home', {
@@ -17,6 +17,7 @@
         controller: 'DocsController',
         controllerAs: 'docsCtrl'
       })
+      // enables us to remove the # in the url
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode({
       enabled: true

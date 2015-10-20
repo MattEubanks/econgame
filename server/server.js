@@ -4,17 +4,18 @@ var path = require('path')
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
-var wsServer = require(__dirname + '/ws-server.js');
 var Schema = mongoose.Schema;
 
 
 mongoose.connect('mongodb://econgame:econgame@ds059692.mongolab.com:59692/econgame', function(err) {
   if(err){return err;}
 });
+
 var UserSchema = new Schema({
   username: { type: String, required: true, index: { unique: true } },
   numGuess: { type: Number, required: true},
 });
+
 var User = mongoose.model('User', UserSchema);
 app.use(bodyParser.json());
 
@@ -47,10 +48,11 @@ app.get('/userguess',function(req,res,next){
  User.find({},function(err,data){
    res.send(data);
  });
+ 
 });
 
 app.use(express.static('client'));
-/*httpServer.on('request', app);
-httpServer.on('upgrade', function(){});*/
+
+
 app.listen(process.env.PORT || 3000);
 module.exports = app;

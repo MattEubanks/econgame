@@ -6,12 +6,14 @@ function NumController($http, $state) {
   this.newUser = {};
 
   this.addUser = function() {
+    // posts guesses
     $http.post('/userguess', this.newUser).success(function(data, status, headers, config) {
       self.newUser = {
         username: '',
         numGuess: ''
       };
     });
+    // takes you to results page upon submition
     $state.go('results');
   };
 }
