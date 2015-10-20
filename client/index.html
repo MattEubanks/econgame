@@ -5,20 +5,21 @@
   <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
   <link rel="icon" href="css/favicon.ico" type="image/x-icon">
   <meta name= "viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/tyl.css" rel="stylesheet">
+  <link href="lib/bootstrap/dist/css/bootstrap.min.css">
   <base href="/">
+
 </head>
 
-<script src="./lib/angular/angular.min.js"></script>
-<script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
-<script src="./lib/js/bootstrap.min.js"></script> 
+<script src="lib/angular/angular.min.js"></script>
+<script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script> 
 <script src="./js/main.js"></script>
 <script src="./js/num-controller.js"></script>
 <script src="./js/docs-controller.js"></script>
 <body ng-app="main">
-  <div class="container">
+  <div class="container" style="margin: 45px 45px">
   <br><br><br><br><br><br><br>
   <div ui-view ></div> 
+</div>
 </body> 
 </html>

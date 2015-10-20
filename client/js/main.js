@@ -24,6 +24,7 @@
   });
 })();
 
+
 // window.addEventListener('load', function() {
 //   var ws = new WebSocket('ws://localhost:8000');
 //   ws.addEventListener('open', function() {

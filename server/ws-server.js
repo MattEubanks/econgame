@@ -10,6 +10,7 @@ server.on('upgrade', function(request, socket, body) {
     count++;
 
     ws.on('message', function(event) {
+
       server.broadcast();
       console.log(count);
     });

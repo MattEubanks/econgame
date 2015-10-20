@@ -1,0 +1,23 @@
+@font-face {
+    font-family: mkFont;
+    src: url(mk1.ttf);
+}
+
+html {
+  font-family: mkFont;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+  font-size: 100%;
+}
+body {
+  font-family: mkFont;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+   background: url('mkLogic.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
